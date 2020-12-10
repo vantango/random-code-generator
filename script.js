@@ -5,9 +5,7 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
-
 }
 
 
@@ -30,6 +28,14 @@ function generatePassword() {
   var passLength = prompt("How many characters would you like your password to be? (min. 8 characters, max. 128 characters)")
 
   // TODO: Create a conditional to make sure that the user has chosen at least one type of character
+  var confirmChar = [includeCapital, includeLower, includeNum, includeSpecial]
+  if (confirmChar === false) {
+  }
+  else if (confirmChar === true) {
+  }
+  else {
+    alert("You must choose at least one character type!")
+  }
 
 
   // Create an array of CAP letters, lower letters, nums, and special chars
@@ -44,56 +50,45 @@ function generatePassword() {
 
   // Create a var to hold the final results
   var finalPass = "";
-  var finalArray = []
+  // var finalArray = []
 
   // I need a for loop to loop over my final array, it should run based on the results of the prompt when we asked user how many chars they liked their password to be, choose randomly from our final array that holds all the chars that the user wanted, and save them to our finalPass var
   for (var i = 0; i < passLength; i++) {
+
     // Create multiple if statements that checks if the user said yes or no to different confirms that we asked them, and based on their response, push those specific chars to our empty array
     if (includeCapital) {
-      console.log("Array is ", upperCase, " length is ", upperCase.length);
       // Generating random index based on the array
       var index = Math.floor(Math.random() * upperCase.length)
-      console.log(index)
-      // generating random element based on the index
+      // Generating random element based on the index
       var randomElement = upperCase[index]
-      console.log(randomElement)
-      // pushing random element to empty array
+      // Pushing random element to empty array
       empty.push(randomElement)
     }
 
     if (includeLower) {
-      console.log("Array is ", lowerCase, " length is ", lowerCase.length);
       // Generating random index based on the array
       var index = Math.floor(Math.random() * lowerCase.length)
-      console.log(index)
-      // generating random element based on the index
+      // Generating random element based on the index
       var randomElement = lowerCase[index]
-      console.log(randomElement)
-      // pushing random element to empty array
+      // Pushing random element to empty array
       empty.push(randomElement)
     }
 
     if (includeNum) {
-      console.log("Array is ", numbers, " length is ", numbers.length);
       // Generating random index based on the array
       var index = Math.floor(Math.random() * numbers.length)
-      console.log(index)
-      // generating random element based on the index
+      // Generating random element based on the index
       var randomElement = numbers[index]
-      console.log(randomElement)
-      // pushing random element to empty array
+      // Pushing random element to empty array
       empty.push(randomElement)
     }
 
     if (includeSpecial) {
-      console.log("Array is ", specialChar, " length is ", specialChar.length);
       // Generating random index based on the array
       var index = Math.floor(Math.random() * specialChar.length)
-      console.log(index)
-      // generating random element based on the index
+      // Generating random element based on the index
       var randomElement = specialChar[index]
-      console.log(randomElement)
-      // pushing random element to empty array
+      // Pushing random element to empty array
       empty.push(randomElement)
     }
     // var randomNum = Math.floor(Math.random() * empty.length)
