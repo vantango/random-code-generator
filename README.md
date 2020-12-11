@@ -11,7 +11,7 @@ For this assignment, I was tasked with creating a random code generator that req
 * CSS
 
 #### Processes
-* Utilizing the pre=existing HTML/CSS files and JavaScript starter code, I created a function to house the entire sequence.
+* Utilizing the pre-existing HTML/CSS files and JavaScript starter code, I created a function to house the entire sequence.
 * Created variables that present the user with a series of confirmations/prompts for their password criteria choices.
 * Created conditionals that require the user to adhere to the two password generator requirements.
 * Created variables for the arrays consisting of all of the characters for each character type.
